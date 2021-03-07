@@ -263,6 +263,50 @@ files:
         }
     );
   learner_created: false
+- name: src/style.css
+  visible: true
+  text: |-
+    html body {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-image: url("img/world.png");
+        min-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .quiz {
+        display: inline-block;
+        border: solid;
+        border-radius: 10px;
+        position: center;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .quiz h1 {
+        font-family: "Bookman Old Style";
+    }
+
+    .cards-container {
+        display: grid;
+        grid: repeat(3, 150px) / repeat(3, 150px);
+        background-color: navajowhite;
+    }
+
+    .card {
+        border: black solid 2px;
+        border-radius: 10px;
+        margin: 10px;
+        text-align: center;
+    }
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/115/stages/627/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Sun, 07 Mar 2021 18:11:47 UTC
 record: -1

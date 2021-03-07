@@ -5,32 +5,66 @@ html body {
 
 body {
     background-image: url("img/world.png");
+    overflow-x: hidden;
     min-width: 500px;
-    margin: 0 auto;
+    font-family: "Bookman Old Style";
 }
 
 .quiz {
-    display: inline-block;
-    border: solid;
+    max-width: 450px;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aliceblue;
+    border: maroon 3px solid;
     border-radius: 10px;
-    position: center;
-    padding: 10px;
-    margin: 10px;
 }
 
 .quiz h1 {
-    font-family: "Bookman Old Style";
+    text-align: center;
 }
 
 .cards-container {
     display: grid;
     grid: repeat(3, 150px) / repeat(3, 150px);
-    background-color: navajowhite;
+    /*background-color: navajowhite;*/
 }
 
 .card {
     border: black solid 2px;
     border-radius: 10px;
     margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.front {
+    background: saddlebrown;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back {
+    background: darkslategray;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.card:hover {
+    transform: rotateY(180deg);
 }
